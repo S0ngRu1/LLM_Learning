@@ -49,12 +49,6 @@ input_str = template.format_map({"context": context_str, "question": question})
 
 chat = ChatOpenAI(model="moonshot-v1-8k")
 
-# 或者使用免费的聊天模型（如Hugging Face的开源模型）
-# from langchain import HuggingFaceHub
-# chat = HuggingFaceHub(
-#     repo_id="google/flan-t5-xl",
-#     model_kwargs={"temperature": 0, "max_length": 64}
-# )
 
 messages = [
     SystemMessage(content="你是一位问答助手"),
